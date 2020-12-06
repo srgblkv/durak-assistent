@@ -1,2 +1,0 @@
-body{width:100%;height:100%;background-color:#000;margin:0;padding:0}#root{max-width:400px;margin:auto}.App{height:100%;margin:0 auto;padding:0;display:flex;flex-direction:column}.card{text-align:center;vertical-align:center;line-height:40px;font-size:22px;margin:3px auto;width:40px;height:40px;cursor:pointer;border-radius:5px;border:1px solid #000;background-color:#fff;-webkit-filter:opacity(.7);filter:opacity(.7)}.passive{-webkit-filter:opacity(.1);filter:opacity(.1)}.red{color:red}.row{display:flex;flex-direction:row}
-/*# sourceMappingURL=main.19db2dd8.chunk.css.map */
