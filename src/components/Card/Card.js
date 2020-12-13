@@ -1,14 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Card.css'
 
 export const Card = (props) => {
-  const { quality, suit, color } = props
-
-  const [state, setState] = useState(false)
+  const {suit, colorCard, currentPlayer: {color}} = props
 
   return (
-    <div className={`card ${color} ${state ? 'passive' : ''}`} onClick={() => setState(!state)}>
-      {quality}{suit}
+    <div
+      className={`card ${colorCard}`}
+    >
+      <div
+        onClick={(e) => {
+          const classList = e.target.classList.value || ''
+          if (classList) {
+            e.target.classList.remove(e.target.classList.value)
+          }
+          e.target.classList.add(color)
+        }}
+      >
+        {suit}
+      </div>
     </div>
   )
 }

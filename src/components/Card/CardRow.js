@@ -1,19 +1,26 @@
 import React from 'react'
-import { Card } from './Card'
+import {Card} from './Card'
 
 import './CardRow.css'
 
 export const CardRow = (props) => {
-  const { quality } = props
+  const {quality, currentPlayer} = props
   const suit = ['♠', '♣', '♥', '♦']
 
   const cards = suit.map((s, i) => (
-    <Card quality={quality} suit={s} color={i > 1 ? 'red' : 'black'} key={`${quality}${s}`} />
+    <Card
+      currentPlayer={currentPlayer}
+      qulity={quality}
+      suit={s}
+      colorCard={i > 1 ? 'red' : 'black'}
+      key={`${quality}${s}`}
+    />
   ))
 
   return (
     <div className="row">
-      {cards}
+      <div className="row-quality">{quality}</div>
+      <div className="row-cards">{cards}</div>
     </div>
   )
 }

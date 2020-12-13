@@ -1,23 +1,106 @@
 .card {
+  position: relative;
   text-align: center;
   vertical-align: center;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 22px;
-  margin: 3px auto;
-  width: 40px;
-  height: 40px;
+  margin: 2px 0;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-    
+
   border-radius: 5px;
   border: black solid 1px;
   background-color: #fff;
-  filter: opacity(0.7);
 }
 
-.passive {
-  filter: opacity(0.1);
+/*
+1 -  yellow,
+2 -purple,
+3 - green,
+4 - dodgerblue,
+5 - orangered
+6 - mediumspringgreen
+*/
+
+.yellow,
+.purple,
+.green,
+.dodgerblue,
+.orangered,
+.mediumspringgreen {
+  outline: 2px solid;
 }
-  
+
+.yellow:before,
+.purple:before,
+.green:before,
+.dodgerblue:before,
+.orangered:before,
+.mediumspringgreen:before {
+  color: black;
+  line-height: 14px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: -10px;
+}
+
+.yellow {
+  outline-color: yellow;
+}
+
+.purple {
+  outline-color: purple;
+}
+
+.green {
+  outline-color: green;
+}
+
+.dodgerblue {
+  outline-color: dodgerblue;
+}
+
+.orangered {
+  outline-color: orangered;
+}
+
+.mediumspringgreen {
+  outline-color: mediumspringgreen;
+}
+
+.yellow:before {
+  content: '1';
+  background: yellow;
+}
+
+.purple:before {
+  content: '2';
+  background: purple;
+}
+
+.green:before {
+  content: '3';
+  background: green;
+}
+
+.dodgerblue:before {
+  content: '4';
+  background: dodgerblue;
+}
+
+.orangered:before {
+  content: '5';
+  background: orangered;
+}
+
+.mediumspringgreen:before {
+  content: '6';
+  background: mediumspringgreen;
+}
+
 .red {
   color: red;
 }
